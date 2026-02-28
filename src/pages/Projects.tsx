@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import ProjectCard from "@/components/ProjectCard";
+import FloatingOrbs from "@/components/animations/FloatingOrbs";
 import { projects, getCategories } from "@/lib/projects";
 
 const Projects = () => {
@@ -11,39 +12,44 @@ const Projects = () => {
   const filtered = active === "All" ? projects : projects.filter((p) => p.category.includes(active));
 
   return (
-    <main className="pt-28 pb-24">
-      <div className="container mx-auto px-6">
+    <main className="relative pt-28 pb-24 overflow-hidden">
+      <FloatingOrbs />
+      <div className="absolute inset-0 animated-grid opacity-20" />
+
+      <div className="container relative mx-auto px-6" style={{ zIndex: 2 }}>
         <AnimatedSection>
-          <h1 className="text-4xl sm:text-5xl font-bold text-gradient mb-4">Projects</h1>
-          <p className="text-muted-foreground max-w-lg mb-10">
-            A selection of systems I&apos;ve designed and built — from AI-powered apps to enterprise platforms.
+          <span className="text-xs font-medium tracking-widest uppercase text-primary mb-4 block">Portfolio</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gradient mb-4">Projects</h1>
+          <p className="text-muted-foreground max-w-lg mb-12">
+            Systems I&apos;ve designed and built — from AI-powered apps to enterprise platforms.
           </p>
         </AnimatedSection>
 
-        {/* Filters */}
-        <AnimatedSection className="flex flex-wrap gap-2 mb-12">
+        <AnimatedSection className="flex flex-wrap gap-2 mb-14">
           {categories.map((cat) => (
-            <button
+            <motion.button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${
                 active === cat
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                  ? "bg-primary text-primary-foreground border-primary glow-blue"
+                  : "bg-secondary text-secondary-foreground border-border hover:border-primary/30"
               }`}
             >
               {cat}
-            </button>
+            </motion.button>
           ))}
         </AnimatedSection>
 
         <AnimatePresence mode="wait">
           <motion.div
             key={active}
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.35 }}
             className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
           >
             {filtered.map((project, i) => (
