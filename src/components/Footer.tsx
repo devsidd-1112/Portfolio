@@ -1,21 +1,57 @@
 import { Github, Linkedin, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const navLinks = [
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/projects", label: "Projects" },
+  { to: "/blog", label: "Blog" },
+  { to: "/contact", label: "Contact" },
+];
 
 const Footer = () => (
-  <footer className="border-t border-border bg-background">
-    <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 px-6 py-8">
-      <p className="text-sm text-muted-foreground">
-        © {new Date().getFullYear()} Developer Portfolio. Built with precision.
-      </p>
-      <div className="flex items-center gap-5">
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="GitHub">
-          <Github size={18} />
-        </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="LinkedIn">
-          <Linkedin size={18} />
-        </a>
-        <a href="mailto:dev@example.com" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Email">
-          <Mail size={18} />
-        </a>
+  <footer className="relative border-t border-border">
+    {/* Top glow line */}
+    <div className="absolute top-0 left-0 right-0 h-[1px]" style={{ background: "linear-gradient(90deg, transparent 10%, hsl(230 85% 62% / 0.15), hsl(270 80% 60% / 0.1), transparent 90%)" }} />
+
+    <div className="container mx-auto px-6 py-12">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex flex-col items-center md:items-start gap-4">
+          <span className="text-lg font-bold text-foreground">&lt;Dev /&gt;</span>
+          <p className="text-sm text-muted-foreground">
+            Building intelligent systems.
+          </p>
+        </div>
+
+        <div className="flex items-center gap-6">
+          {navLinks.map((l) => (
+            <Link
+              key={l.to}
+              to={l.to}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {l.label}
+            </Link>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-4">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-all" aria-label="GitHub">
+            <Github size={16} />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-all" aria-label="LinkedIn">
+            <Linkedin size={16} />
+          </a>
+          <a href="mailto:dev@example.com" className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-all" aria-label="Email">
+            <Mail size={16} />
+          </a>
+        </div>
+      </div>
+
+      <div className="mt-10 pt-6 border-t border-border text-center">
+        <p className="text-xs text-muted-foreground">
+          © {new Date().getFullYear()} Developer Portfolio. Engineered with precision.
+        </p>
       </div>
     </div>
   </footer>

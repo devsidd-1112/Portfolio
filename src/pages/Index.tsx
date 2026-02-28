@@ -1,24 +1,28 @@
 import HeroSection from "@/components/HeroSection";
 import ProjectCard from "@/components/ProjectCard";
-import TechStackGrid from "@/components/TechStackGrid";
+import SkillsSection from "@/components/sections/SkillsSection";
+import ArchitectureSection from "@/components/sections/ArchitectureSection";
 import CTASection from "@/components/CTASection";
 import AnimatedSection from "@/components/AnimatedSection";
+import FloatingOrbs from "@/components/animations/FloatingOrbs";
 import { projects } from "@/lib/projects";
 
 const Index = () => {
   const featured = projects.filter((p) => p.featured);
 
   return (
-    <main>
+    <main className="relative">
       <HeroSection />
 
       {/* Featured Projects */}
-      <section className="py-24 sm:py-32">
-        <div className="container mx-auto px-6">
-          <AnimatedSection className="mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gradient mb-4">Featured Projects</h2>
+      <section className="relative py-28 sm:py-36 overflow-hidden">
+        <FloatingOrbs />
+        <div className="container relative mx-auto px-6" style={{ zIndex: 2 }}>
+          <AnimatedSection className="mb-20">
+            <span className="text-xs font-medium tracking-widest uppercase text-primary mb-4 block">Selected Work</span>
+            <h2 className="text-3xl sm:text-5xl font-bold text-gradient mb-4">Featured Projects</h2>
             <p className="text-muted-foreground max-w-lg">
-              Selected work showcasing full-stack development and AI integration.
+              Systems showcasing full-stack development and AI integration.
             </p>
           </AnimatedSection>
 
@@ -30,7 +34,15 @@ const Index = () => {
         </div>
       </section>
 
-      <TechStackGrid />
+      {/* Divider */}
+      <div className="glow-line mx-auto w-2/3" />
+
+      <SkillsSection />
+
+      <div className="glow-line mx-auto w-2/3" />
+
+      <ArchitectureSection />
+
       <CTASection />
     </main>
   );
