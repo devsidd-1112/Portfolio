@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Suspense, lazy } from "react";
 import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,6 +7,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 import FloatingOrbs from "@/components/animations/FloatingOrbs";
 import MagneticButton from "@/components/animations/MagneticButton";
 import { toast } from "sonner";
+
+const ParticleScene = lazy(() => import("@/components/3d/ParticleScene"));
 
 const Contact = () => {
   const [name, setName] = useState("");
