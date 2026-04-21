@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, Suspense, lazy } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import ProjectCard from "@/components/ProjectCard";
 import FloatingOrbs from "@/components/animations/FloatingOrbs";
 import { projects, getCategories } from "@/lib/projects";
+
+const ParticleScene = lazy(() => import("@/components/3d/ParticleScene"));
 
 const Projects = () => {
   const categories = ["All", ...getCategories()];
