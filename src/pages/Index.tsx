@@ -1,3 +1,4 @@
+import { Suspense, lazy } from "react";
 import HeroSection from "@/components/HeroSection";
 import ProjectCard from "@/components/ProjectCard";
 import SkillsSection from "@/components/sections/SkillsSection";
@@ -7,12 +8,21 @@ import AnimatedSection from "@/components/AnimatedSection";
 import FloatingOrbs from "@/components/animations/FloatingOrbs";
 import { projects } from "@/lib/projects";
 
+const ParticleScene = lazy(() => import("@/components/3d/ParticleScene"));
+
 const Index = () => {
   const featured = projects.filter((p) => p.featured);
 
   return (
     <main className="relative">
       <HeroSection />
+
+      {/* Global 3D Particle Background */}
+      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 0 }}>
+        <Suspense fallback={null}>
+          <ParticleScene />
+        </Suspense>
+      </div>
 
       {/* Featured Projects */}
       <section className="relative py-28 sm:py-36 overflow-hidden">
