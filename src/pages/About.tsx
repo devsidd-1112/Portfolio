@@ -1,6 +1,9 @@
+import { Suspense, lazy } from "react";
 import AnimatedSection from "@/components/AnimatedSection";
 import FloatingOrbs from "@/components/animations/FloatingOrbs";
 import { motion } from "framer-motion";
+
+const ParticleScene = lazy(() => import("@/components/3d/ParticleScene"));
 
 const timeline = [
   {
