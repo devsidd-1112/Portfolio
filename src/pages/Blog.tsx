@@ -1,8 +1,11 @@
+import { useState, Suspense, lazy } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import FloatingOrbs from "@/components/animations/FloatingOrbs";
 import { blogPosts } from "@/lib/blog";
+
+const ParticleScene = lazy(() => import("@/components/3d/ParticleScene"));
 
 const Blog = () => (
   <main className="relative pt-28 pb-24 overflow-hidden">
