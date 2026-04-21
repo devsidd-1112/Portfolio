@@ -17,6 +17,9 @@ const Projects = () => {
     <main className="relative pt-28 pb-24 overflow-hidden">
       <FloatingOrbs />
       <div className="absolute inset-0 animated-grid opacity-20" />
+      <Suspense fallback={null}>
+        <ParticleScene />
+      </Suspense>
 
       <div className="container relative mx-auto px-6" style={{ zIndex: 2 }}>
         <AnimatedSection>
