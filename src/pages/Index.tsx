@@ -17,6 +17,13 @@ const Index = () => {
     <main className="relative">
       <HeroSection />
 
+      {/* Global 3D Particle Background */}
+      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 0 }}>
+        <Suspense fallback={null}>
+          <ParticleScene />
+        </Suspense>
+      </div>
+
       {/* Featured Projects */}
       <section className="relative py-28 sm:py-36 overflow-hidden">
         <FloatingOrbs />
