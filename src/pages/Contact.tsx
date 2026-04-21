@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Suspense, lazy } from "react";
 import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,6 +7,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 import FloatingOrbs from "@/components/animations/FloatingOrbs";
 import MagneticButton from "@/components/animations/MagneticButton";
 import { toast } from "sonner";
+
+const ParticleScene = lazy(() => import("@/components/3d/ParticleScene"));
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -25,6 +27,9 @@ const Contact = () => {
     <main className="relative pt-28 pb-24 overflow-hidden">
       <FloatingOrbs />
       <div className="absolute inset-0 animated-grid opacity-20" />
+      <Suspense fallback={null}>
+        <ParticleScene />
+      </Suspense>
 
       <div className="container relative mx-auto px-6 max-w-2xl" style={{ zIndex: 2 }}>
         <AnimatedSection>

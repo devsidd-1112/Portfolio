@@ -1,6 +1,9 @@
+import { Suspense, lazy } from "react";
 import AnimatedSection from "@/components/AnimatedSection";
 import FloatingOrbs from "@/components/animations/FloatingOrbs";
 import { motion } from "framer-motion";
+
+const ParticleScene = lazy(() => import("@/components/3d/ParticleScene"));
 
 const timeline = [
   {
@@ -33,6 +36,9 @@ const About = () => (
   <main className="relative pt-28 pb-24 overflow-hidden">
     <FloatingOrbs />
     <div className="absolute inset-0 animated-grid opacity-20" />
+    <Suspense fallback={null}>
+      <ParticleScene />
+    </Suspense>
 
     <div className="container relative mx-auto px-6 max-w-3xl" style={{ zIndex: 2 }}>
       <AnimatedSection>
