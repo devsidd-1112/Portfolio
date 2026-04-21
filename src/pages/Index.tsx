@@ -1,3 +1,4 @@
+import { Suspense, lazy } from "react";
 import HeroSection from "@/components/HeroSection";
 import ProjectCard from "@/components/ProjectCard";
 import SkillsSection from "@/components/sections/SkillsSection";
@@ -6,6 +7,8 @@ import CTASection from "@/components/CTASection";
 import AnimatedSection from "@/components/AnimatedSection";
 import FloatingOrbs from "@/components/animations/FloatingOrbs";
 import { projects } from "@/lib/projects";
+
+const ParticleScene = lazy(() => import("@/components/3d/ParticleScene"));
 
 const Index = () => {
   const featured = projects.filter((p) => p.featured);
