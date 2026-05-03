@@ -35,7 +35,7 @@ const HeroSection = () => (
         </div>
       </motion.div>
 
-      <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-extrabold tracking-tight leading-[1.05] mb-6">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-extrabold tracking-tight leading-[1.1] sm:leading-[1.05] mb-6 px-4">
         <TextReveal text="Hello there, I'm Siddarth" className="text-gradient" delay={0.2} />
         <br />
         <TextReveal text="Full Stack Developer & AI Builder" className="text-gradient-accent" delay={0.6} />
@@ -54,7 +54,7 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
-        className="mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground leading-relaxed mb-12"
+        className="mx-auto max-w-2xl text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 px-4"
       >
         Building scalable systems and intelligent applications with modern tech.
         <br className="hidden sm:block" />
@@ -65,7 +65,7 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 1.3 }}
-        className="flex flex-wrap items-center justify-center gap-4"
+        className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 px-4"
       >
         <MagneticButton>
           <Button asChild variant="hero" size="lg">

@@ -59,14 +59,14 @@ const Contact = () => {
       <div className="container relative mx-auto px-6 max-w-2xl" style={{ zIndex: 2 }}>
         <AnimatedSection>
           <span className="text-xs font-medium tracking-widest uppercase text-primary mb-4 block">Let's Connect</span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gradient mb-4">Get in Touch</h1>
-          <p className="text-muted-foreground mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gradient mb-4">Get in Touch</h1>
+          <p className="text-sm sm:text-base text-muted-foreground mb-8 sm:mb-12">
             Interested in collaborating or discussing opportunities? Feel free to reach out.
           </p>
         </AnimatedSection>
 
         <AnimatedSection delay={0.1}>
-          <div className="flex flex-wrap gap-4 mb-14">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-10 sm:mb-14">
             {[
               { href: "mailto:siddarth2k5@gmail.com", icon: Mail, label: "siddarth2k5@gmail.com" },
               { href: "https://github.com/devsidd-1112", icon: Github, label: "GitHub", ext: true },
@@ -77,9 +77,9 @@ const Contact = () => {
                 href={link.href}
                 target={link.ext ? "_blank" : undefined}
                 rel={link.ext ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-card border border-border text-sm text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all"
+                className="flex items-center justify-center sm:justify-start gap-2 px-4 py-3 sm:py-2.5 rounded-xl bg-card border border-border text-sm text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all min-h-[44px]"
               >
-                <link.icon size={15} /> {link.label}
+                <link.icon size={15} /> <span className="truncate">{link.label}</span>
               </a>
             ))}
           </div>

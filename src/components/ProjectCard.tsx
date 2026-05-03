@@ -57,18 +57,18 @@ const ProjectCard = ({ project, index = 0 }: ProjectCardProps) => {
         {/* Gradient border top */}
         <div className="h-[1px] w-full" style={{ background: "linear-gradient(90deg, transparent, hsl(230 85% 62% / 0.3), hsl(270 80% 60% / 0.3), transparent)" }} />
 
-        <div className="relative p-6 sm:p-8">
-          <div className="flex items-start justify-between mb-4">
-            <h3 className="text-xl font-semibold text-foreground group-hover:text-gradient-accent transition-colors">
+        <div className="relative p-5 sm:p-6 md:p-8">
+          <div className="flex items-start justify-between mb-3 sm:mb-4 gap-2">
+            <h3 className="text-lg sm:text-xl font-semibold text-foreground group-hover:text-gradient-accent transition-colors">
               {project.title}
             </h3>
             <ArrowUpRight
               size={18}
-              className="text-muted-foreground opacity-0 -translate-y-1 translate-x-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 group-hover:text-primary"
+              className="text-muted-foreground opacity-0 -translate-y-1 translate-x-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 group-hover:text-primary flex-shrink-0"
             />
           </div>
 
-          <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+          <p className="text-muted-foreground text-sm leading-relaxed mb-4 sm:mb-6">
             {project.tagline}
           </p>
 

@@ -43,11 +43,11 @@ const About = () => (
     <div className="container relative mx-auto px-6 max-w-3xl" style={{ zIndex: 2 }}>
       <AnimatedSection>
         <span className="text-xs font-medium tracking-widest uppercase text-primary mb-4 block">About Me</span>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gradient mb-8">Siddarth P</h1>
-        <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gradient mb-6 sm:mb-8">Siddarth P</h1>
+        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">
           I&apos;m a Computer Science Engineering student at SSN College of Engineering with strong foundations in programming, data structures, and problem-solving. I focus on building scalable full-stack systems and integrating AI to solve real-world problems.
         </p>
-        <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">
           From distributed microservices platforms to AI-powered developer tools and mobile applications, I design systems that are scalable, efficient, and user-centered. I thrive at the intersection of backend engineering, AI integration, and thoughtful system architecture.
         </p>
         <p className="text-lg text-muted-foreground leading-relaxed mb-16">

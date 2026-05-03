@@ -25,18 +25,18 @@ const Index = () => {
       </div>
 
       {/* Featured Projects */}
-      <section className="relative py-28 sm:py-36 overflow-hidden">
+      <section className="relative py-20 sm:py-28 md:py-36 overflow-hidden">
         <FloatingOrbs />
         <div className="container relative mx-auto px-6" style={{ zIndex: 2 }}>
-          <AnimatedSection className="mb-20">
+          <AnimatedSection className="mb-12 sm:mb-16 md:mb-20">
             <span className="text-xs font-medium tracking-widest uppercase text-primary mb-4 block">Portfolio</span>
-            <h2 className="text-3xl sm:text-5xl font-bold text-gradient mb-4">Featured Projects</h2>
-            <p className="text-muted-foreground max-w-lg">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gradient mb-4">Featured Projects</h2>
+            <p className="text-sm sm:text-base text-muted-foreground max-w-lg">
               Scalable systems, AI-powered applications, and mobile platforms built with modern tech stacks.
             </p>
           </AnimatedSection>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {featured.map((project, i) => (
               <ProjectCard key={project.slug} project={project} index={i} />
             ))}

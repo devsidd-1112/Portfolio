@@ -30,14 +30,14 @@ const Projects = () => {
           </p>
         </AnimatedSection>
 
-        <AnimatedSection className="flex flex-wrap gap-2 mb-14">
+        <AnimatedSection className="flex flex-wrap gap-2 mb-10 sm:mb-14">
           {categories.map((cat) => (
             <motion.button
               key={cat}
               onClick={() => setActive(cat)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${
+              className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-sm font-medium transition-all duration-300 border min-h-[44px] ${
                 active === cat
                   ? "bg-primary text-primary-foreground border-primary glow-blue"
                   : "bg-secondary text-secondary-foreground border-border hover:border-primary/30"
@@ -55,7 +55,7 @@ const Projects = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.35 }}
-            className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           >
             {filtered.map((project, i) => (
               <ProjectCard key={project.slug} project={project} index={i} />
