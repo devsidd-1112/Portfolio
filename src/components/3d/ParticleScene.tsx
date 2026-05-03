@@ -14,7 +14,7 @@ function Particles() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const count = isMobile ? 30 : 800;
+  const count = isMobile ? 150 : 800;
 
   const positions = useMemo(() => {
     const pos = new Float32Array(count * 3);
@@ -28,8 +28,8 @@ function Particles() {
 
   useFrame((state) => {
     if (!ref.current) return;
-    const speed = isMobile ? 0.015 : 0.03;
-    const xSpeed = isMobile ? 0.01 : 0.02;
+    const speed = isMobile ? 0.02 : 0.03;
+    const xSpeed = isMobile ? 0.015 : 0.02;
     ref.current.rotation.y = state.clock.elapsedTime * speed;
     ref.current.rotation.x = Math.sin(state.clock.elapsedTime * xSpeed) * 0.1;
   });
@@ -39,10 +39,10 @@ function Particles() {
       <PointMaterial
         transparent
         color="#5b8cf7"
-        size={isMobile ? 0.04 : 0.025}
+        size={isMobile ? 0.03 : 0.025}
         sizeAttenuation
         depthWrite={false}
-        opacity={isMobile ? 0.25 : 0.6}
+        opacity={isMobile ? 0.5 : 0.6}
       />
     </Points>
   );
@@ -62,12 +62,12 @@ const ParticleScene = () => {
     <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 0 }}>
       <Canvas
         camera={{ position: [0, 0, 5], fov: 60 }}
-        dpr={isMobile ? [1, 1] : [1, 1.5]}
-        frameloop={isMobile ? "demand" : "always"}
+        dpr={isMobile ? [1, 1.25] : [1, 1.5]}
+        frameloop="always"
         gl={{ 
           antialias: false, 
           alpha: true,
-          powerPreference: isMobile ? "low-power" : "high-performance"
+          powerPreference: isMobile ? "default" : "high-performance"
         }}
         style={{ background: "transparent" }}
       >
