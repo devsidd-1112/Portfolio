@@ -2,19 +2,31 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import {
   Code2, Server, Smartphone, Database, Brain, Container,
-  GitBranch, Globe, Cpu, Layers,
+  GitBranch, Globe, Cpu, Layers, Cloud, Lock, Zap,
 } from "lucide-react";
 
 const techs = [
-  { name: "Java", icon: Code2, color: "hsl(230 85% 62%)" },
-  { name: "Spring Boot", icon: Server, color: "hsl(140 60% 50%)" },
+  { name: "Java", icon: Code2, color: "hsl(10 80% 55%)" },
+  { name: "Python", icon: Code2, color: "hsl(210 80% 60%)" },
+  { name: "C++", icon: Code2, color: "hsl(210 70% 55%)" },
+  { name: "TypeScript", icon: Code2, color: "hsl(210 80% 60%)" },
   { name: "React", icon: Globe, color: "hsl(200 90% 60%)" },
-  { name: "Next.js", icon: Layers, color: "hsl(0 0% 80%)" },
-  { name: "PostgreSQL", icon: Database, color: "hsl(210 70% 55%)" },
+  { name: "React Native", icon: Smartphone, color: "hsl(200 100% 60%)" },
   { name: "Flutter", icon: Smartphone, color: "hsl(200 100% 60%)" },
+  { name: "Node.js", icon: Server, color: "hsl(140 60% 50%)" },
+  { name: "Spring Boot", icon: Server, color: "hsl(140 60% 50%)" },
+  { name: "PostgreSQL", icon: Database, color: "hsl(210 70% 55%)" },
+  { name: "MongoDB", icon: Database, color: "hsl(140 60% 45%)" },
+  { name: "Firebase", icon: Database, color: "hsl(30 90% 55%)" },
+  { name: "Machine Learning", icon: Brain, color: "hsl(270 80% 60%)" },
+  { name: "LLMs", icon: Cpu, color: "hsl(270 80% 60%)" },
   { name: "TensorFlow", icon: Brain, color: "hsl(30 90% 55%)" },
-  { name: "Gemini API", icon: Cpu, color: "hsl(270 80% 60%)" },
   { name: "Docker", icon: Container, color: "hsl(205 80% 55%)" },
+  { name: "Kubernetes", icon: Container, color: "hsl(210 80% 55%)" },
+  { name: "Kafka", icon: Layers, color: "hsl(0 0% 80%)" },
+  { name: "Redis", icon: Zap, color: "hsl(0 80% 55%)" },
+  { name: "OAuth 2.0", icon: Lock, color: "hsl(230 85% 62%)" },
+  { name: "Gemini API", icon: Cpu, color: "hsl(270 80% 60%)" },
   { name: "Git", icon: GitBranch, color: "hsl(10 80% 55%)" },
 ];
 
@@ -28,7 +40,7 @@ const SkillsSection = () => (
         <span className="text-xs font-medium tracking-widest uppercase text-primary mb-4 block">Technologies</span>
         <h2 className="text-3xl sm:text-5xl font-bold text-gradient mb-4">Tech Stack</h2>
         <p className="text-muted-foreground max-w-lg mx-auto">
-          The tools I use to build production systems.
+          Tools and technologies I use to build scalable systems.
         </p>
       </AnimatedSection>
 

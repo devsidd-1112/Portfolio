@@ -7,28 +7,28 @@ const ParticleScene = lazy(() => import("@/components/3d/ParticleScene"));
 
 const timeline = [
   {
-    period: "Present",
-    title: "Full-Stack Developer & AI Engineer",
+    period: "Jul 2025",
+    title: "Full Stack Development Intern – Cognitech",
     description:
-      "Building production-grade AI systems with Java, Spring Boot, and modern frontend frameworks. Focused on intelligent automation and accessibility.",
+      "Built dynamic web interfaces and backend features in a structured development environment. Worked on responsive UI components and collaborated on real-world development workflows in Coimbatore.",
+  },
+  {
+    period: "2025",
+    title: "Amazon ML Summer School & Intel Gen AI Hackathon",
+    description:
+      "Selected for Amazon ML Summer School 2025. Participated in Intel Gen AI Hackathon, exploring AI applications and machine learning techniques.",
   },
   {
     period: "2024",
-    title: "AI Systems & Mobile Development",
+    title: "AI & Mobile Development Projects",
     description:
-      "Developed ThunaiVizhi-AI — an offline AI assistant using TensorFlow Lite and Flutter. Explored on-device ML for underserved communities.",
+      "Developed AI Developer Copilot with semantic search and LLM-powered insights. Built UniEat campus food ordering app with real-time group ordering and payment integration using React Native and Firebase.",
   },
   {
     period: "2023",
-    title: "Enterprise Java & Cloud Architecture",
+    title: "Started Computer Science Engineering",
     description:
-      "Deep-dived into microservices with Spring Boot, containerized deployments with Docker, and cloud-native architecture patterns.",
-  },
-  {
-    period: "2022",
-    title: "Foundations in Computer Science",
-    description:
-      "Built strong fundamentals in data structures, algorithms, system design, and object-oriented programming with Java.",
+      "Began B.E. in Computer Science at SSN College of Engineering, Chennai. Built strong foundations in programming, data structures, algorithms, and full-stack development with Java and Spring Boot.",
   },
 ];
 
@@ -42,13 +42,16 @@ const About = () => (
 
     <div className="container relative mx-auto px-6 max-w-3xl" style={{ zIndex: 2 }}>
       <AnimatedSection>
-        <span className="text-xs font-medium tracking-widest uppercase text-primary mb-4 block">Who I Am</span>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gradient mb-8">About Me</h1>
+        <span className="text-xs font-medium tracking-widest uppercase text-primary mb-4 block">About Me</span>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gradient mb-8">Siddarth P</h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-          I&apos;m a Full-Stack Java Developer with a deep focus on building AI-powered, production-grade systems. I believe software should solve real problems — and I approach every project with an architecture-first mindset.
+          I&apos;m a Computer Science Engineering student at SSN College of Engineering with strong foundations in programming, data structures, and problem-solving. I focus on building scalable full-stack systems and integrating AI to solve real-world problems.
+        </p>
+        <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+          From distributed microservices platforms to AI-powered developer tools and mobile applications, I design systems that are scalable, efficient, and user-centered. I thrive at the intersection of backend engineering, AI integration, and thoughtful system architecture.
         </p>
         <p className="text-lg text-muted-foreground leading-relaxed mb-16">
-          From intelligent APIs to offline mobile AI assistants, I design systems that are scalable, secure, and human-centered. I thrive at the intersection of backend engineering, AI integration, and thoughtful system design.
+          Currently exploring advanced topics in machine learning, generative AI, and cloud-native architectures while building production-ready applications.
         </p>
       </AnimatedSection>
 

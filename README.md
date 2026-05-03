@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
+# Siddarth P — Portfolio Website
 
-## Project info
+Full Stack Developer & AI Builder portfolio showcasing scalable systems and intelligent applications.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 About
 
-## How can I edit this code?
+This is my personal portfolio website built with modern web technologies. It features:
 
-There are several ways of editing your application.
+- **Projects**: Scalable E-Commerce Microservices, AI Developer Copilot, UniEat, InsightAI
+- **Tech Stack**: React, TypeScript, Tailwind CSS, Framer Motion, Three.js
+- **Design**: Modern, clean, and professional with subtle animations
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **Framework**: React 18 + Vite
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Animations**: Framer Motion + GSAP
+- **3D Graphics**: Three.js + React Three Fiber
+- **Routing**: React Router
+- **Testing**: Vitest + Testing Library
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## 📦 Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to project directory
+cd ai-showcase-crafted
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 🔧 Available Scripts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm run dev          # Start dev server (port 8080)
+npm run build        # Production build
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
+npm run test         # Run tests once
+npm run test:watch   # Run tests in watch mode
+```
 
-**Use GitHub Codespaces**
+## 📫 Contact
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Email**: siddarth2k5@gmail.com
+- **LinkedIn**: [linkedin.com/in/siddarth-p-159a62305](https://linkedin.com/in/siddarth-p-159a62305)
+- **GitHub**: [github.com/devsidd-1112](https://github.com/devsidd-1112)
 
-## What technologies are used for this project?
+## 📄 License
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+© 2026 Siddarth P. All rights reserved.

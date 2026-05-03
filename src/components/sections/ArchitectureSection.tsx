@@ -3,20 +3,20 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { Boxes, Cpu, Network, Shield } from "lucide-react";
 
 const concepts = [
-  { icon: Boxes, title: "Microservices Architecture", desc: "Decomposing complex domains into resilient, independently deployable services." },
-  { icon: Cpu, title: "AI-First Engineering", desc: "Integrating ML models and LLMs directly into production pipelines." },
-  { icon: Network, title: "System Design", desc: "Designing for scale, availability, and performance from day one." },
-  { icon: Shield, title: "Security by Design", desc: "JWT, RBAC, and data isolation baked into every layer." },
+  { icon: Boxes, title: "Microservices Architecture", desc: "Building distributed systems with independent services, event-driven communication, and resilience patterns." },
+  { icon: Cpu, title: "AI Integration", desc: "Leveraging LLMs, ML models, and generative AI to build intelligent, context-aware applications." },
+  { icon: Network, title: "System Design", desc: "Designing scalable architectures with proper data modeling, caching strategies, and observability." },
+  { icon: Shield, title: "Security & Auth", desc: "Implementing OAuth 2.0, JWT authentication, and secure API design patterns." },
 ];
 
 const ArchitectureSection = () => (
   <section className="relative py-28 sm:py-36 overflow-hidden">
     <div className="container relative mx-auto px-6">
       <AnimatedSection className="text-center mb-20">
-        <span className="text-xs font-medium tracking-widest uppercase text-accent mb-4 block">Philosophy</span>
-        <h2 className="text-3xl sm:text-5xl font-bold text-gradient mb-4">Architecture Mindset</h2>
+        <span className="text-xs font-medium tracking-widest uppercase text-accent mb-4 block">Approach</span>
+        <h2 className="text-3xl sm:text-5xl font-bold text-gradient mb-4">How I Build</h2>
         <p className="text-muted-foreground max-w-lg mx-auto">
-          Every system I build starts with a clear architectural vision.
+          Every project starts with thoughtful architecture and clean design principles.
         </p>
       </AnimatedSection>
 

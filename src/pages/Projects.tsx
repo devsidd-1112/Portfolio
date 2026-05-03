@@ -23,10 +23,10 @@ const Projects = () => {
 
       <div className="container relative mx-auto px-6" style={{ zIndex: 2 }}>
         <AnimatedSection>
-          <span className="text-xs font-medium tracking-widest uppercase text-primary mb-4 block">Portfolio</span>
+          <span className="text-xs font-medium tracking-widest uppercase text-primary mb-4 block">My Work</span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gradient mb-4">Projects</h1>
           <p className="text-muted-foreground max-w-lg mb-12">
-            Systems I&apos;ve designed and built — from AI-powered apps to enterprise platforms.
+            Systems I&apos;ve designed and built — from microservices platforms to AI-powered applications.
           </p>
         </AnimatedSection>
 

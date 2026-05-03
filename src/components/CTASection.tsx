@@ -21,10 +21,10 @@ const CTASection = () => (
           <div className="relative p-12 sm:p-20 text-center" style={{ zIndex: 2 }}>
             <span className="text-xs font-medium tracking-widest uppercase text-primary mb-6 block">Let's Connect</span>
             <h2 className="text-3xl sm:text-5xl font-bold text-gradient mb-4">
-              Let&apos;s build something great
+              Ready to collaborate?
             </h2>
             <p className="text-muted-foreground max-w-md mx-auto mb-10">
-              Open to full-time roles, freelance projects, and collaborations on AI-powered systems.
+              Open to internships, full-time opportunities, and interesting projects in full-stack development and AI.
             </p>
             <MagneticButton className="inline-block">
               <Button asChild variant="hero" size="lg">

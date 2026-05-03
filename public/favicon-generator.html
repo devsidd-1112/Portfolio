@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Generator - SP</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #1e293b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        
+        .favicon-preview {
+            width: 512px;
+            height: 512px;
+            background: #0f172a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .monogram {
+            font-family: 'Courier New', monospace;
+            font-size: 280px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -8px;
+            line-height: 1;
+        }
+        
+        .variant-2 .monogram {
+            font-size: 240px;
+        }
+        
+        .variant-2 .monogram::before {
+            content: '<';
+            color: #64748b;
+            margin-right: 20px;
+        }
+        
+        .variant-2 .monogram::after {
+            content: '>';
+            color: #64748b;
+            margin-left: 20px;
+        }
+        
+        .variant-3 {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        
+        .variant-3 .monogram {
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .instructions {
+            color: #e2e8f0;
+            max-width: 512px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        .instructions h2 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        
+        .instructions code {
+            background: #1e293b;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        
+        .label {
+            color: #94a3b8;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h2>Favicon Generator</h2>
+        <p>Right-click on any design below and select <code>Save Image As...</code></p>
+        <p>Then upload to <a href="https://favicon.io/favicon-converter/" target="_blank" style="color: #60a5fa;">favicon.io</a> to generate all sizes</p>
+    </div>
+    
+    <div class="label">Variant 1: Clean Monogram</div>
+    <div class="favicon-preview variant-1">
+        <div class="monogram">SP</div>
+    </div>
+    
+    <div class="label">Variant 2: With Brackets</div>
+    <div class="favicon-preview variant-2">
+        <div class="monogram">SP</div>
+    </div>
+    
+    <div class="label">Variant 3: Gradient Text</div>
+    <div class="favicon-preview variant-3">
+        <div class="monogram">SP</div>
+    </div>
+    
+    <div class="instructions">
+        <h2>How to Use</h2>
+        <p>1. Right-click on your favorite design above</p>
+        <p>2. Select "Save Image As..." or take a screenshot (512x512)</p>
+        <p>3. Go to <a href="https://favicon.io/favicon-converter/" target="_blank" style="color: #60a5fa;">favicon.io/favicon-converter</a></p>
+        <p>4. Upload your image and download the generated favicon package</p>
+        <p>5. Replace the files in <code>public/</code> folder</p>
+    </div>
+</body>
+</html>

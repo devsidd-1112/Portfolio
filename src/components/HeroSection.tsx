@@ -36,9 +36,9 @@ const HeroSection = () => (
       </motion.div>
 
       <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] font-extrabold tracking-tight leading-[1.05] mb-6">
-        <TextReveal text="Full-Stack Developer" className="text-gradient" delay={0.2} />
+        <TextReveal text="Hello there, I'm Siddarth" className="text-gradient" delay={0.2} />
         <br />
-        <TextReveal text="& AI Systems Engineer" className="text-gradient-accent" delay={0.6} />
+        <TextReveal text="Full Stack Developer & AI Builder" className="text-gradient-accent" delay={0.6} />
       </h1>
 
       {/* Glow underline */}
@@ -56,9 +56,9 @@ const HeroSection = () => (
         transition={{ duration: 0.8, delay: 1 }}
         className="mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground leading-relaxed mb-12"
       >
-        I architect production-grade systems with Java, Spring Boot, and modern AI.
+        Building scalable systems and intelligent applications with modern tech.
         <br className="hidden sm:block" />
-        From intelligent APIs to offline mobile AI — I ship what matters.
+        Computer Science student focused on full-stack development and AI integration.
       </motion.p>
 
       <motion.div
@@ -76,8 +76,8 @@ const HeroSection = () => (
         </MagneticButton>
         <MagneticButton>
           <Button asChild variant="hero-outline" size="lg">
-            <a href="#" download>
-              <Download size={16} /> Resume
+            <a href="mailto:siddarth2k5@gmail.com">
+              <Download size={16} /> Contact Me
             </a>
           </Button>
         </MagneticButton>

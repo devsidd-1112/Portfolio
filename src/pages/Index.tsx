@@ -29,10 +29,10 @@ const Index = () => {
         <FloatingOrbs />
         <div className="container relative mx-auto px-6" style={{ zIndex: 2 }}>
           <AnimatedSection className="mb-20">
-            <span className="text-xs font-medium tracking-widest uppercase text-primary mb-4 block">Selected Work</span>
+            <span className="text-xs font-medium tracking-widest uppercase text-primary mb-4 block">Portfolio</span>
             <h2 className="text-3xl sm:text-5xl font-bold text-gradient mb-4">Featured Projects</h2>
             <p className="text-muted-foreground max-w-lg">
-              Systems showcasing full-stack development and AI integration.
+              Scalable systems, AI-powered applications, and mobile platforms built with modern tech stacks.
             </p>
           </AnimatedSection>
 

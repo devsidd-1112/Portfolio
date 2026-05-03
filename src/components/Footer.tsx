@@ -5,7 +5,6 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/projects", label: "Projects" },
-  { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -17,9 +16,9 @@ const Footer = () => (
     <div className="container mx-auto px-6 py-12">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="flex flex-col items-center md:items-start gap-4">
-          <span className="text-lg font-bold text-foreground">&lt;Dev /&gt;</span>
+          <span className="text-lg font-bold text-foreground">&lt;Siddarth /&gt;</span>
           <p className="text-sm text-muted-foreground">
-            Building intelligent systems.
+            Building scalable systems and intelligent applications.
           </p>
         </div>
 
@@ -36,13 +35,13 @@ const Footer = () => (
         </div>
 
         <div className="flex items-center gap-4">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-all" aria-label="GitHub">
+          <a href="https://github.com/devsidd-1112" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-all" aria-label="GitHub">
             <Github size={16} />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-all" aria-label="LinkedIn">
+          <a href="https://linkedin.com/in/siddarth-p-159a62305" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-all" aria-label="LinkedIn">
             <Linkedin size={16} />
           </a>
-          <a href="mailto:dev@example.com" className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-all" aria-label="Email">
+          <a href="mailto:siddarth2k5@gmail.com" className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-all" aria-label="Email">
             <Mail size={16} />
           </a>
         </div>
@@ -50,7 +49,7 @@ const Footer = () => (
 
       <div className="mt-10 pt-6 border-t border-border text-center">
         <p className="text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Developer Portfolio. Engineered with precision.
+          © {new Date().getFullYear()} Siddarth P. Built with React, TypeScript & Tailwind CSS.
         </p>
       </div>
     </div>

@@ -7,6 +7,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import FloatingOrbs from "@/components/animations/FloatingOrbs";
 import MagneticButton from "@/components/animations/MagneticButton";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 
 const ParticleScene = lazy(() => import("@/components/3d/ParticleScene"));
 
@@ -14,13 +15,37 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! I'll get back to you soon.");
-    setName("");
-    setEmail("");
-    setMessage("");
+    setIsSubmitting(true);
+
+    try {
+      // EmailJS configuration
+      const serviceId = "service_863ihmj";
+      const templateId = "template_hp54u9b";
+      const publicKey = "cqWKMwKXhmLHKeLCT";
+
+      const templateParams = {
+        from_name: name,
+        from_email: email,
+        message: message,
+        to_email: "siddarth2k5@gmail.com",
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      toast.success("Message sent! I'll get back to you soon.");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast.error("Failed to send message. Please try emailing directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -33,19 +58,19 @@ const Contact = () => {
 
       <div className="container relative mx-auto px-6 max-w-2xl" style={{ zIndex: 2 }}>
         <AnimatedSection>
-          <span className="text-xs font-medium tracking-widest uppercase text-primary mb-4 block">Contact</span>
+          <span className="text-xs font-medium tracking-widest uppercase text-primary mb-4 block">Let's Connect</span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gradient mb-4">Get in Touch</h1>
           <p className="text-muted-foreground mb-12">
-            Have a project in mind or want to discuss opportunities? Let&apos;s connect.
+            Interested in collaborating or discussing opportunities? Feel free to reach out.
           </p>
         </AnimatedSection>
 
         <AnimatedSection delay={0.1}>
           <div className="flex flex-wrap gap-4 mb-14">
             {[
-              { href: "mailto:dev@example.com", icon: Mail, label: "dev@example.com" },
-              { href: "https://github.com", icon: Github, label: "GitHub", ext: true },
-              { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn", ext: true },
+              { href: "mailto:siddarth2k5@gmail.com", icon: Mail, label: "siddarth2k5@gmail.com" },
+              { href: "https://github.com/devsidd-1112", icon: Github, label: "GitHub", ext: true },
+              { href: "https://linkedin.com/in/siddarth-p-159a62305", icon: Linkedin, label: "LinkedIn", ext: true },
             ].map((link) => (
               <a
                 key={link.label}
@@ -98,8 +123,8 @@ const Contact = () => {
               />
             </div>
             <MagneticButton className="inline-block">
-              <Button type="submit" variant="hero" size="lg">
-                Send Message <Send size={16} />
+              <Button type="submit" variant="hero" size="lg" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Message"} <Send size={16} />
               </Button>
             </MagneticButton>
           </form>

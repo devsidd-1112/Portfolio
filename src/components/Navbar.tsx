@@ -7,7 +7,6 @@ const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/projects", label: "Projects" },
-  { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -40,7 +39,7 @@ const Navbar = () => {
 
       <div className="container mx-auto flex items-center justify-between px-6">
         <Link to="/" className="text-xl font-bold tracking-tight text-foreground relative group">
-          <span className="relative z-10">&lt;Dev /&gt;</span>
+          <span className="relative z-10">&lt;Siddarth /&gt;</span>
           <span className="absolute inset-0 rounded-lg bg-primary/5 scale-0 group-hover:scale-100 transition-transform duration-300" />
         </Link>
 
