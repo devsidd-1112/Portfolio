@@ -51,5 +51,3 @@ const ParticleScene = () => (
 );
 
 export default ParticleScene;
-
-export default ParticleScene;
