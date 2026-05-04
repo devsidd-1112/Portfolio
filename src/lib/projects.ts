@@ -32,12 +32,13 @@ export const projects: Project[] = [
       "Building deterministic financial calculations with zero AI hallucinations",
       "Implementing bi-directional liquidity optimization (delay outflows, accelerate inflows)",
       "Creating multi-agent negotiation system for automated payment term discussions",
+      "Integrating multiple data sources (bank APIs, OCR receipts, invoices) into unified format",
     ],
     howItWorks:
       "System ingests data from bank APIs, receipts (OCR), and invoices. Runway engine calculates exact daily solvency and identifies liquidity gaps. Linear programming optimizer determines optimal payment routing under constraints. AI generates negotiation drafts and micro-installment proposals. Human-in-the-loop approval ensures control before execution.",
     github: "https://github.com/devsidd-1112/CashPilot",
     featured: true,
-    state: "Production Ready",
+    state: "Ready",
   },
   {
     slug: "scalable-ecommerce-microservices",
@@ -55,12 +56,16 @@ export const projects: Project[] = [
       "Implementing distributed transaction patterns across microservices",
       "Building resilient communication with circuit breakers and retry mechanisms",
       "Setting up comprehensive observability and monitoring stack",
+      "Designing event-driven architecture with Kafka for async communication",
+      "Implementing rate limiting and caching strategies with Redis",
+      "Orchestrating containerized services with Kubernetes",
+      "Ensuring data consistency across independent service databases",
     ],
     howItWorks:
       "Each service operates independently with its own database. Kafka handles async events between services. Redis provides caching and rate limiting. Circuit breakers prevent cascading failures. CI/CD pipeline with GitHub Actions automates testing and deployment to Kubernetes clusters.",
     github: "https://github.com/devsidd-1112/E-Commerce",
     featured: true,
-    state: "Production Ready",
+    state: "Ready",
   },
   {
     slug: "ai-developer-copilot",
@@ -78,12 +83,14 @@ export const projects: Project[] = [
       "Building accurate semantic search across large codebases",
       "Optimizing LLM prompts for relevant code insights",
       "Implementing secure OAuth flow with GitHub API",
+      "Creating efficient vector embeddings for code indexing",
+      "Managing context windows for large repository analysis",
     ],
     howItWorks:
       "Users authenticate via GitHub OAuth. The system clones and indexes repositories using vector embeddings. Semantic search enables natural language queries. LLMs analyze code patterns, suggest improvements, and generate documentation. AI debugging assistant provides context-aware solutions.",
     github: "https://github.com/devsidd-1112/CodeBase-Copilot",
     featured: true,
-    state: "Production Ready",
+    state: "Ready",
   },
   {
     slug: "unieat-campus-food-ordering",
@@ -101,12 +108,13 @@ export const projects: Project[] = [
       "Handling concurrent group order modifications with Firestore transactions",
       "Implementing reliable payment splitting and revenue distribution",
       "Building real-time order status updates across multiple users",
+      "Optimizing mobile app performance for low-end devices",
     ],
     howItWorks:
       "Users browse menus and create individual or group orders. Group members can add items collaboratively with real-time sync. Payment is processed via Razorpay with automatic splitting. Vendors receive orders instantly with revenue tracking. Real-time notifications keep users updated on order status.",
     github: "https://github.com/devsidd-1112",
     featured: false,
-    state: "Production Ready",
+    state: "Ready",
   },
   {
     slug: "insight-ai",
@@ -129,7 +137,7 @@ export const projects: Project[] = [
       "Users upload meeting transcripts or recordings. The system processes content through Gemini API to extract summaries, identify action items, assign priorities, and detect deadlines. Results are stored in PostgreSQL and displayed in an organized dashboard with filtering and export capabilities.",
     github: "https://github.com/devsidd-1112/InsightAI",
     featured: false,
-    state: "Production Ready",
+    state: "Ready",
   },
   {
     slug: "santorini-ai",
@@ -147,12 +155,13 @@ export const projects: Project[] = [
       "Optimizing Minimax search depth for real-time gameplay",
       "Implementing effective state evaluation heuristics",
       "Balancing AI difficulty levels for different player skills",
+      "Creating intuitive 3D controls and camera movement",
     ],
     howItWorks:
       "Players place workers on a 6×6 grid and take turns moving and building. AI evaluates game states using height advantage and winning positions. Minimax algorithm explores game tree to specified depth (1-4 ply based on difficulty). Alpha-Beta pruning eliminates 60-80% of branches for faster decisions.",
     github: "https://github.com/devsidd-1112/Santorini",
     featured: false,
-    state: "Production Ready",
+    state: "Ready",
   },
   {
     slug: "sahayak-voice",
@@ -168,7 +177,6 @@ export const projects: Project[] = [
       "React Native mobile app with on-device speech recognition. Lightweight NLP for entity extraction (names, BP, symptoms). SQLite for offline storage. Spring Boot backend with MongoDB for synced records. JWT authentication with 7-day tokens for offline scenarios.",
     challenges: [
       "Building accurate entity extraction without cloud LLMs",
-      "Handling Hindi and English speech recognition offline",
       "Implementing reliable offline-first sync with conflict resolution",
     ],
     howItWorks:
@@ -191,7 +199,6 @@ export const projects: Project[] = [
       "React frontend with Zustand state management. Firebase backend with Firestore for real-time sync. IndexedDB for offline caching. Cloud Functions for AI features (sentiment analysis, task generation, productivity scoring). Adaptive Personality Engine adjusts UI based on mood and schedule.",
     challenges: [
       "Building mood-aware UI that adapts in real-time",
-      "Implementing intelligent task breakdown and scheduling algorithms",
       "Creating offline-first architecture with conflict resolution",
     ],
     howItWorks:
@@ -216,12 +223,14 @@ export const projects: Project[] = [
       "Generating accurate 3D body models from single front-facing photos",
       "Applying dress textures realistically to 3D models",
       "Rendering interactive 3D models in real-time on web browsers",
+      "Handling diverse body types and clothing styles",
+      "Optimizing PIFu model performance for web deployment",
     ],
     howItWorks:
       "Users browse dress catalog and select items. Upload front-facing photo for 3D model generation. PIFu creates 3D body model, OpenPose detects keypoints for proper fitting. Selected dress is textured and mapped onto the model using Blender. Three.js renders interactive 3D view in browser for real-time visualization.",
     github: "https://github.com/devsidd-1112",
     featured: false,
-    state: "Production Ready",
+    state: "Ready",
   },
 ];
 
