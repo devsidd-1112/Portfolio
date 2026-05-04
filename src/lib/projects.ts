@@ -12,6 +12,7 @@ export interface Project {
   github?: string;
   demo?: string;
   featured: boolean;
+  state: string;
 }
 
 export const projects: Project[] = [
@@ -36,6 +37,7 @@ export const projects: Project[] = [
       "System ingests data from bank APIs, receipts (OCR), and invoices. Runway engine calculates exact daily solvency and identifies liquidity gaps. Linear programming optimizer determines optimal payment routing under constraints. AI generates negotiation drafts and micro-installment proposals. Human-in-the-loop approval ensures control before execution.",
     github: "https://github.com/devsidd-1112/CashPilot",
     featured: true,
+    state: "Production Ready",
   },
   {
     slug: "scalable-ecommerce-microservices",
@@ -58,6 +60,7 @@ export const projects: Project[] = [
       "Each service operates independently with its own database. Kafka handles async events between services. Redis provides caching and rate limiting. Circuit breakers prevent cascading failures. CI/CD pipeline with GitHub Actions automates testing and deployment to Kubernetes clusters.",
     github: "https://github.com/devsidd-1112/E-Commerce",
     featured: true,
+    state: "Production Ready",
   },
   {
     slug: "ai-developer-copilot",
@@ -80,6 +83,7 @@ export const projects: Project[] = [
       "Users authenticate via GitHub OAuth. The system clones and indexes repositories using vector embeddings. Semantic search enables natural language queries. LLMs analyze code patterns, suggest improvements, and generate documentation. AI debugging assistant provides context-aware solutions.",
     github: "https://github.com/devsidd-1112/CodeBase-Copilot",
     featured: true,
+    state: "Production Ready",
   },
   {
     slug: "unieat-campus-food-ordering",
@@ -102,6 +106,7 @@ export const projects: Project[] = [
       "Users browse menus and create individual or group orders. Group members can add items collaboratively with real-time sync. Payment is processed via Razorpay with automatic splitting. Vendors receive orders instantly with revenue tracking. Real-time notifications keep users updated on order status.",
     github: "https://github.com/devsidd-1112",
     featured: false,
+    state: "Production Ready",
   },
   {
     slug: "insight-ai",
@@ -124,6 +129,7 @@ export const projects: Project[] = [
       "Users upload meeting transcripts or recordings. The system processes content through Gemini API to extract summaries, identify action items, assign priorities, and detect deadlines. Results are stored in PostgreSQL and displayed in an organized dashboard with filtering and export capabilities.",
     github: "https://github.com/devsidd-1112/InsightAI",
     featured: false,
+    state: "Production Ready",
   },
   {
     slug: "santorini-ai",
@@ -146,6 +152,7 @@ export const projects: Project[] = [
       "Players place workers on a 6×6 grid and take turns moving and building. AI evaluates game states using height advantage and winning positions. Minimax algorithm explores game tree to specified depth (1-4 ply based on difficulty). Alpha-Beta pruning eliminates 60-80% of branches for faster decisions.",
     github: "https://github.com/devsidd-1112/Santorini",
     featured: false,
+    state: "Production Ready",
   },
   {
     slug: "sahayak-voice",
@@ -168,6 +175,7 @@ export const projects: Project[] = [
       "Workers speak visit details naturally. Speech-to-text converts voice to text on-device. Entity extractor identifies patient names, blood pressure, symptoms, and dates. TTS reads back extracted data for confirmation. Records stored locally in SQLite and sync to backend when online.",
     github: "https://github.com/devsidd-1112/Sahayak-voice",
     featured: false,
+    state: "Testing",
   },
   {
     slug: "zenie-productivity",
@@ -190,6 +198,7 @@ export const projects: Project[] = [
       "App analyzes user mood from diary entries and adjusts UI tone/colors. Smart scheduler recommends tasks based on energy levels and deadlines. Pomodoro timer tracks focus with distraction detection. AI generates daily plans, micro-tasks for lazy mode, and revision schedules. Real-time sync with offline support.",
     github: "https://github.com/devsidd-1112/Zenie",
     featured: false,
+    state: "Testing",
   },
   {
     slug: "virtuwear",
@@ -212,6 +221,7 @@ export const projects: Project[] = [
       "Users browse dress catalog and select items. Upload front-facing photo for 3D model generation. PIFu creates 3D body model, OpenPose detects keypoints for proper fitting. Selected dress is textured and mapped onto the model using Blender. Three.js renders interactive 3D view in browser for real-time visualization.",
     github: "https://github.com/devsidd-1112",
     featured: false,
+    state: "Production Ready",
   },
 ];
 

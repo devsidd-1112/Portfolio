@@ -92,7 +92,7 @@ const ProjectDetail = () => {
           <div className="grid grid-cols-3 gap-6 p-8 rounded-2xl border border-border bg-card">
             <StatCounter value={`${project.techStack.length}+`} label="Technologies" />
             <StatCounter value={`${project.challenges.length}`} label="Challenges Solved" />
-            <StatCounter value="100%" label="Production Ready" />
+            <StatCounter value={project.state} label="State" />
           </div>
         </AnimatedSection>
 
