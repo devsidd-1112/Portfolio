@@ -18,12 +18,6 @@ const timeline = [
     description:
       "Built dynamic web interfaces and backend features in a structured development environment. Worked on responsive UI components and collaborated on real-world development workflows in Coimbatore.",
   },
-  {
-    period: "2025",
-    title: "Amazon ML Summer School & Intel Gen AI Hackathon",
-    description:
-      "Selected for Amazon ML Summer School 2025. Participated in Intel Gen AI Hackathon, exploring AI applications and machine learning techniques.",
-  },
 ];
 
 const About = () => (
