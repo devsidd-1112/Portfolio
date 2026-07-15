@@ -47,7 +47,6 @@ const HeroSection = () => (
             "Full Stack Developer",
             "AI Builder",
             "Backend Engineer",
-            "Problem Solver",
           ]}
           typingSpeed={45}
           deletingSpeed={20}

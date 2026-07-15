@@ -2,32 +2,51 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import {
   Code2, Server, Smartphone, Database, Brain, Container,
-  GitBranch, Globe, Cpu, Layers, Cloud, Lock, Zap,
+  GitBranch, Globe, Cpu, Layers, Cloud, Lock, Zap, Key,
 } from "lucide-react";
 
 const techs = [
+  // Languages
   { name: "Java", icon: Code2, color: "hsl(10 80% 55%)" },
   { name: "Python", icon: Code2, color: "hsl(210 80% 60%)" },
-  { name: "C++", icon: Code2, color: "hsl(210 70% 55%)" },
+  { name: "C", icon: Code2, color: "hsl(210 70% 55%)" },
   { name: "TypeScript", icon: Code2, color: "hsl(210 80% 60%)" },
+  
+  // Frontend
   { name: "React", icon: Globe, color: "hsl(200 90% 60%)" },
   { name: "React Native", icon: Smartphone, color: "hsl(200 100% 60%)" },
-  { name: "Flutter", icon: Smartphone, color: "hsl(200 100% 60%)" },
+  
+  // Backend
   { name: "Node.js", icon: Server, color: "hsl(140 60% 50%)" },
   { name: "Spring Boot", icon: Server, color: "hsl(140 60% 50%)" },
+  { name: "Django", icon: Server, color: "hsl(140 60% 45%)" },
+  { name: "FastAPI", icon: Server, color: "hsl(175 70% 50%)" },
+  { name: "NestJS", icon: Server, color: "hsl(0 80% 55%)" },
+  
+  // Databases
   { name: "PostgreSQL", icon: Database, color: "hsl(210 70% 55%)" },
   { name: "MongoDB", icon: Database, color: "hsl(140 60% 45%)" },
   { name: "Firebase", icon: Database, color: "hsl(30 90% 55%)" },
+  { name: "Redis", icon: Zap, color: "hsl(0 80% 55%)" },
+  
+  // AI/ML
   { name: "Machine Learning", icon: Brain, color: "hsl(270 80% 60%)" },
   { name: "LLMs", icon: Cpu, color: "hsl(270 80% 60%)" },
-  { name: "TensorFlow", icon: Brain, color: "hsl(30 90% 55%)" },
+  { name: "LangChain", icon: Brain, color: "hsl(270 70% 55%)" },
+  { name: "RAG", icon: Cpu, color: "hsl(280 75% 58%)" },
+  
+  // Tools
   { name: "Docker", icon: Container, color: "hsl(205 80% 55%)" },
   { name: "Kubernetes", icon: Container, color: "hsl(210 80% 55%)" },
   { name: "Kafka", icon: Layers, color: "hsl(0 0% 80%)" },
-  { name: "Redis", icon: Zap, color: "hsl(0 80% 55%)" },
+  { name: "Git", icon: GitBranch, color: "hsl(10 80% 55%)" },
+  { name: "Selenium", icon: Globe, color: "hsl(140 60% 50%)" },
+  
+  // Auth & APIs
+  { name: "REST APIs", icon: Cloud, color: "hsl(230 85% 62%)" },
+  { name: "JWT", icon: Key, color: "hsl(30 90% 55%)" },
   { name: "OAuth 2.0", icon: Lock, color: "hsl(230 85% 62%)" },
   { name: "Gemini API", icon: Cpu, color: "hsl(270 80% 60%)" },
-  { name: "Git", icon: GitBranch, color: "hsl(10 80% 55%)" },
 ];
 
 const SkillsSection = () => (
