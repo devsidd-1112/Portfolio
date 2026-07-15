@@ -24,18 +24,6 @@ const timeline = [
     description:
       "Selected for Amazon ML Summer School 2025. Participated in Intel Gen AI Hackathon, exploring AI applications and machine learning techniques.",
   },
-  {
-    period: "2024",
-    title: "AI & Mobile Development Projects",
-    description:
-      "Developed AI Developer Copilot with semantic search and LLM-powered insights. Built UniEat campus food ordering app with real-time group ordering and payment integration using React Native and Firebase.",
-  },
-  {
-    period: "2023",
-    title: "Started Computer Science Engineering",
-    description:
-      "Began B.E. in Computer Science at SSN College of Engineering, Chennai. Built strong foundations in programming, data structures, algorithms, and full-stack development with Java and Spring Boot.",
-  },
 ];
 
 const About = () => (
