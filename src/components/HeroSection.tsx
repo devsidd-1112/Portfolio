@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import GradientReveal from "@/components/animations/GradientReveal";
+import Typewriter from "@/components/animations/Typewriter";
 import MagneticButton from "@/components/animations/MagneticButton";
 import FloatingOrbs from "@/components/animations/FloatingOrbs";
 
@@ -35,28 +35,34 @@ const HeroSection = () => (
         </div>
       </motion.div>
 
-      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-extrabold tracking-tight leading-[1.1] sm:leading-[1.05] mb-6 px-4">
-        <GradientReveal text="Hello there, I'm Siddarth" className="text-gradient" delay={0.2} />
-        <br />
-        <GradientReveal text="Full Stack Developer & AI Builder" className="text-gradient-accent" delay={0.8} />
-        <motion.span
-          className="inline-block w-[3px] h-[0.9em] bg-primary ml-1 align-middle"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: [1, 1, 0, 0] }}
-          transition={{
-            duration: 1,
-            repeat: Infinity,
-            delay: 1.6,
-            times: [0, 0.5, 0.5, 1],
-          }}
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-extrabold tracking-tight leading-[1.1] sm:leading-[1.05] mb-6 px-4"
+      >
+        <span className="text-gradient block mb-2">Hello there, I'm Siddarth</span>
+        <Typewriter
+          phrases={[
+            "Full Stack Developer",
+            "AI Builder",
+            "Backend Engineer",
+            "Problem Solver",
+          ]}
+          typingSpeed={45}
+          deletingSpeed={20}
+          pause={1800}
+          loop={true}
+          cursor={true}
+          className="text-gradient-accent"
         />
-      </h1>
+      </motion.h1>
 
       {/* Glow underline */}
       <motion.div
         initial={{ scaleX: 0, opacity: 0 }}
         animate={{ scaleX: 1, opacity: 1 }}
-        transition={{ duration: 1, delay: 1.4 }}
+        transition={{ duration: 1, delay: 0.8 }}
         className="mx-auto mb-8 h-[2px] w-48 origin-center"
         style={{ background: "var(--gradient-primary)" }}
       />
@@ -64,7 +70,7 @@ const HeroSection = () => (
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
+        transition={{ duration: 0.8, delay: 1 }}
         className="mx-auto max-w-2xl text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 px-4"
       >
         Building scalable systems and intelligent applications with modern tech.
@@ -75,7 +81,7 @@ const HeroSection = () => (
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 1.5 }}
+        transition={{ duration: 0.6, delay: 1.2 }}
         className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 px-4"
       >
         <MagneticButton>

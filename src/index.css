@@ -267,3 +267,27 @@
     transition: transform 0.3s ease;
   }
 }
+
+@layer utilities {
+  /* Premium cursor blink animation */
+  @keyframes blink {
+    0%, 45% {
+      opacity: 1;
+    }
+    46%, 100% {
+      opacity: 0;
+    }
+  }
+
+  .animate-blink {
+    animation: blink 850ms infinite;
+  }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-blink {
+      animation: none;
+      opacity: 0.7;
+    }
+  }
+}
