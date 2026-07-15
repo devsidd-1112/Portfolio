@@ -7,6 +7,12 @@ const ParticleScene = lazy(() => import("@/components/3d/ParticleScene"));
 
 const timeline = [
   {
+    period: "May 2026 – Present",
+    title: "Backend Developer Intern – DTskill",
+    description:
+      "Developed backend services and REST APIs using Python, Django REST Framework, and FastAPI. Implemented JWT authentication, PostgreSQL integration, and document processing pipelines. Contributed to AI-powered enterprise solutions including Resume Parser and Job Pack Validation. Contributed to the backend development of Pulse, a multi-dealership management platform, by developing scalable REST APIs and enterprise workflow modules. Technologies: Python, Django, FastAPI, PostgreSQL, JWT, LangChain, Git.",
+  },
+  {
     period: "Jul 2025",
     title: "Full Stack Development Intern – Cognitech",
     description:
